@@ -1,8 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <div className='bg-base-100 fixed top-0 w-full z-10 bg-opacity-50'>
+        <div className='bg-yellow-100 fixed top-0 w-full z-20'>
             <div className='max-w-7xl mx-auto'>
                 <div className="navbar">
                     <div className="navbar-start">
@@ -25,22 +26,16 @@ const Header = () => {
                                 <li><a>Item 3</a></li>
                             </ul>
                         </div>
-                        <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                        <Link to="/">Bistro Boss</Link>
                     </div>
-                    <div className="navbar-center hidden lg:flex">
+                    <div className="navbar-center hidden lg:flex text-black">
                         <ul className="menu menu-horizontal px-1">
-                            <li><a>Item 1</a></li>
-                            <li tabIndex={0}>
-                                <a>
-                                    Parent
-                                    <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" /></svg>
-                                </a>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
+                            <li>
+                                <Link to="/">Home</Link>
                             </li>
-                            <li><a>Item 3</a></li>
+                            <li>
+                                <Link to="menu">Our Menu</Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="navbar-end">
